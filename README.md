@@ -36,3 +36,12 @@ For running deployemnt:
 		kubectl rollout  history deployment/<deployment-name>
  	d. Rollback:
 		kubectl rollout undo deployment/<deployment-name>
+
+For running service:
+  1. run a minikibe.
+  2. Run a deployment.
+  3. Run a service: kubectl create -f service-configuration.yml
+  4. New Service will be created of type NodePort
+  5. For accessing api endpoint through your broswer:
+	a. find out node ip address: kubectl describe node <node-name> {ex - minikube }
+	b. hit the - url:targetPort 
