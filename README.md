@@ -7,7 +7,7 @@
 * For running replication controller:
    1. run a minikube.
    1. Run this command - ```kubectl create -f rc-defination.yml```
-   1. New controller has been created, run following commands to see them
+   1. New controller has been created, some useful commands
 		* ```kubectl get replicationcontroller```
   		* ```kubectl get pods```
 
@@ -20,6 +20,9 @@
 			* ```kubeclt decribe replicaset <replicaset-name>```
 		* **Delete**:
 			* ```kubectl delete replicaset <replicaset-name>```
+		* **Scale**:
+			* ```kubectl replace -f replicaset-definition.yml```
+			* ```kubectl scale -replicas=6 -f replicaset-definition.yml```
 
 * For running deployemnt:
   1. run a minikube.
